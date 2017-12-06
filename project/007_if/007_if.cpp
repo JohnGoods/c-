@@ -17,6 +17,14 @@ int main(){
 			}
 		}
 	}
+	
+
+	//三目运算嵌套
+	/*int a, b, c, d, max;
+	cout << "请输入三个数字";
+	cin >> a >> b >> c;
+	max = (d = a >= b ? a:b) >= c ? d : c;
+	cout << "三个数中最大值为" << max;*/
 	system("PAUSE");
 	return 0;
 }
