@@ -39,6 +39,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "017_dayAndTime", "017_dayAn
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "018_structuralBody", "018_structuralBody\018_structuralBody.vcxproj", "{8B1E31EC-FBEF-4077-82F3-630C41670B63}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "019_class", "019_class\019_class.vcxproj", "{822B120A-452D-4B85-886F-9B0B848557BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "020_structureAndDestruct", "020_structureAndDestruct\020_structureAndDestruct.vcxproj", "{38C61CA2-4DA0-4DFD-BA57-91E2E9E8BD49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -117,6 +121,14 @@ Global
 		{8B1E31EC-FBEF-4077-82F3-630C41670B63}.Debug|Win32.Build.0 = Debug|Win32
 		{8B1E31EC-FBEF-4077-82F3-630C41670B63}.Release|Win32.ActiveCfg = Release|Win32
 		{8B1E31EC-FBEF-4077-82F3-630C41670B63}.Release|Win32.Build.0 = Release|Win32
+		{822B120A-452D-4B85-886F-9B0B848557BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{822B120A-452D-4B85-886F-9B0B848557BB}.Debug|Win32.Build.0 = Debug|Win32
+		{822B120A-452D-4B85-886F-9B0B848557BB}.Release|Win32.ActiveCfg = Release|Win32
+		{822B120A-452D-4B85-886F-9B0B848557BB}.Release|Win32.Build.0 = Release|Win32
+		{38C61CA2-4DA0-4DFD-BA57-91E2E9E8BD49}.Debug|Win32.ActiveCfg = Debug|Win32
+		{38C61CA2-4DA0-4DFD-BA57-91E2E9E8BD49}.Debug|Win32.Build.0 = Debug|Win32
+		{38C61CA2-4DA0-4DFD-BA57-91E2E9E8BD49}.Release|Win32.ActiveCfg = Release|Win32
+		{38C61CA2-4DA0-4DFD-BA57-91E2E9E8BD49}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
