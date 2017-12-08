@@ -47,6 +47,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "021_friendFunction", "021_f
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "022_inlineFunction", "022_inlineFunction\022_inlineFunction.vcxproj", "{DB93F225-833B-4C7E-94C1-17D1D4C937AC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "023_thisPointer", "023_thisPointer\023_thisPointer.vcxproj", "{137A567E-DE4F-4D39-9FAD-EE64B9DA3A1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -141,6 +143,10 @@ Global
 		{DB93F225-833B-4C7E-94C1-17D1D4C937AC}.Debug|Win32.Build.0 = Debug|Win32
 		{DB93F225-833B-4C7E-94C1-17D1D4C937AC}.Release|Win32.ActiveCfg = Release|Win32
 		{DB93F225-833B-4C7E-94C1-17D1D4C937AC}.Release|Win32.Build.0 = Release|Win32
+		{137A567E-DE4F-4D39-9FAD-EE64B9DA3A1A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{137A567E-DE4F-4D39-9FAD-EE64B9DA3A1A}.Debug|Win32.Build.0 = Debug|Win32
+		{137A567E-DE4F-4D39-9FAD-EE64B9DA3A1A}.Release|Win32.ActiveCfg = Release|Win32
+		{137A567E-DE4F-4D39-9FAD-EE64B9DA3A1A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
