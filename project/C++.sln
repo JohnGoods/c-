@@ -59,6 +59,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "027_reloadOperatorAndFuncti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "028_polymorphic", "028_polymorphic\028_polymorphic.vcxproj", "{BC5CD94F-F531-476C-BDA3-57042ECB1A26}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "029_dataAbstraction", "029_dataAbstraction\029_dataAbstraction.vcxproj", "{AC792369-9B35-4473-A992-6B0DD272A944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -177,6 +179,10 @@ Global
 		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Debug|Win32.Build.0 = Debug|Win32
 		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Release|Win32.ActiveCfg = Release|Win32
 		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Release|Win32.Build.0 = Release|Win32
+		{AC792369-9B35-4473-A992-6B0DD272A944}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC792369-9B35-4473-A992-6B0DD272A944}.Debug|Win32.Build.0 = Debug|Win32
+		{AC792369-9B35-4473-A992-6B0DD272A944}.Release|Win32.ActiveCfg = Release|Win32
+		{AC792369-9B35-4473-A992-6B0DD272A944}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
