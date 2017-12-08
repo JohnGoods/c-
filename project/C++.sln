@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "026_inherit", "026_inherit\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "027_reloadOperatorAndFunction", "027_reloadOperatorAndFunction\027_reloadOperatorAndFunction.vcxproj", "{FBF5889F-FD57-46C1-9BA3-D5FDE4594DCE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "028_polymorphic", "028_polymorphic\028_polymorphic.vcxproj", "{BC5CD94F-F531-476C-BDA3-57042ECB1A26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -171,6 +173,10 @@ Global
 		{FBF5889F-FD57-46C1-9BA3-D5FDE4594DCE}.Debug|Win32.Build.0 = Debug|Win32
 		{FBF5889F-FD57-46C1-9BA3-D5FDE4594DCE}.Release|Win32.ActiveCfg = Release|Win32
 		{FBF5889F-FD57-46C1-9BA3-D5FDE4594DCE}.Release|Win32.Build.0 = Release|Win32
+		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Debug|Win32.Build.0 = Debug|Win32
+		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Release|Win32.ActiveCfg = Release|Win32
+		{BC5CD94F-F531-476C-BDA3-57042ECB1A26}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
