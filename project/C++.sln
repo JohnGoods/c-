@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "024_pointersToClass", "024_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "025_staticMember", "025_staticMember\025_staticMember.vcxproj", "{75A68662-E7E7-485E-95FA-5040EDD235DA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "026_inherit", "026_inherit\026_inherit.vcxproj", "{3F59C2A6-61E2-4DEB-90A6-42C5F1D232E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -159,6 +161,10 @@ Global
 		{75A68662-E7E7-485E-95FA-5040EDD235DA}.Debug|Win32.Build.0 = Debug|Win32
 		{75A68662-E7E7-485E-95FA-5040EDD235DA}.Release|Win32.ActiveCfg = Release|Win32
 		{75A68662-E7E7-485E-95FA-5040EDD235DA}.Release|Win32.Build.0 = Release|Win32
+		{3F59C2A6-61E2-4DEB-90A6-42C5F1D232E7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F59C2A6-61E2-4DEB-90A6-42C5F1D232E7}.Debug|Win32.Build.0 = Debug|Win32
+		{3F59C2A6-61E2-4DEB-90A6-42C5F1D232E7}.Release|Win32.ActiveCfg = Release|Win32
+		{3F59C2A6-61E2-4DEB-90A6-42C5F1D232E7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
