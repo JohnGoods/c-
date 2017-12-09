@@ -65,6 +65,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "030_ReadAndWriteFile", "030
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "031_dynamicMemory", "031_dynamicMemory\031_dynamicMemory.vcxproj", "{F4C7DC09-7DCE-4251-B714-B56E6F837868}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "032_namespace", "032_namespace\032_namespace.vcxproj", "{D75BCC61-1F7B-4A8C-A8A0-E2BD5B28F6D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -195,6 +197,10 @@ Global
 		{F4C7DC09-7DCE-4251-B714-B56E6F837868}.Debug|Win32.Build.0 = Debug|Win32
 		{F4C7DC09-7DCE-4251-B714-B56E6F837868}.Release|Win32.ActiveCfg = Release|Win32
 		{F4C7DC09-7DCE-4251-B714-B56E6F837868}.Release|Win32.Build.0 = Release|Win32
+		{D75BCC61-1F7B-4A8C-A8A0-E2BD5B28F6D9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D75BCC61-1F7B-4A8C-A8A0-E2BD5B28F6D9}.Debug|Win32.Build.0 = Debug|Win32
+		{D75BCC61-1F7B-4A8C-A8A0-E2BD5B28F6D9}.Release|Win32.ActiveCfg = Release|Win32
+		{D75BCC61-1F7B-4A8C-A8A0-E2BD5B28F6D9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
