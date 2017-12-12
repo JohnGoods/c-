@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="035_ signalProcessing .cpp">
+    <ClCompile Include="035_signalProcessing .cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
