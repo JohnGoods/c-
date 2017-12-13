@@ -1,0 +1,16 @@
+﻿生成启动时间为 2017/12/13 22:16:20。
+     1>项目“C:\Users\Administrator\Desktop\C++\c-\project\037_MFC\037_MFC.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\Vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\037_MFC.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt 037_MFCDlg.cpp
+         037_MFCDlg.cpp
+       Link:
+         E:\Vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\C++\c-\project\Debug\037_MFC.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:E:\Vs2013\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"C:\Users\Administrator\Desktop\C++\c-\project\Debug\037_MFC.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Desktop\C++\c-\project\Debug\037_MFC.lib" /MACHINE:X86 Debug\037_MFC.res
+         Debug\037_MFC.obj
+         Debug\037_MFCDlg.obj
+         Debug\stdafx.obj
+         037_MFC.vcxproj -> C:\Users\Administrator\Desktop\C++\c-\project\Debug\037_MFC.exe
+     1>已完成生成项目“C:\Users\Administrator\Desktop\C++\c-\project\037_MFC\037_MFC.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.65
