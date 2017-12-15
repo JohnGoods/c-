@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_first", "C++\C++.vcxproj", "{4FB8B0F2-5E7D-4578-AEB0-B9F6B814693E}"
 EndProject
@@ -76,6 +76,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "036_multithreading", "036_multithreading\036_multithreading.vcxproj", "{7F8F1CF4-BE87-47B1-B716-D91662456EE4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "037_MFC", "037_MFC\037_MFC.vcxproj", "{AD9E52A3-A3FA-4232-8A38-628BDC847203}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "038_STL", "038_STL\038_STL.vcxproj", "{F1082FF3-EDD2-4E51-B2D9-CDE118031C04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -231,6 +233,10 @@ Global
 		{AD9E52A3-A3FA-4232-8A38-628BDC847203}.Debug|Win32.Build.0 = Debug|Win32
 		{AD9E52A3-A3FA-4232-8A38-628BDC847203}.Release|Win32.ActiveCfg = Release|Win32
 		{AD9E52A3-A3FA-4232-8A38-628BDC847203}.Release|Win32.Build.0 = Release|Win32
+		{F1082FF3-EDD2-4E51-B2D9-CDE118031C04}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F1082FF3-EDD2-4E51-B2D9-CDE118031C04}.Debug|Win32.Build.0 = Debug|Win32
+		{F1082FF3-EDD2-4E51-B2D9-CDE118031C04}.Release|Win32.ActiveCfg = Release|Win32
+		{F1082FF3-EDD2-4E51-B2D9-CDE118031C04}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
