@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "afxwin.h"
 
 
 // CMy037_MFCDlg ¶Ô»°¿ò
@@ -31,4 +32,10 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 //	afx_msg void OnBnClickedOk();
+	afx_msg void OnEnChangeEdit1();
+	CEdit EDIT;
+	afx_msg void OnBnClickedButton2();
+	afx_msg void OnBnClickedButton7();
+	CString EDIT_CS;
+	afx_msg void OnBnClickedButton8();
 };

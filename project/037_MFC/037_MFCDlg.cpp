@@ -49,6 +49,7 @@ END_MESSAGE_MAP()
 
 CMy037_MFCDlg::CMy037_MFCDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CMy037_MFCDlg::IDD, pParent)
+	, EDIT_CS(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -56,13 +57,16 @@ CMy037_MFCDlg::CMy037_MFCDlg(CWnd* pParent /*=NULL*/)
 void CMy037_MFCDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_EDIT1, EDIT);
+	DDX_Text(pDX, IDC_EDIT1, EDIT_CS);
 }
 
 BEGIN_MESSAGE_MAP(CMy037_MFCDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-//	ON_BN_CLICKED(IDOK, &CMy037_MFCDlg::OnBnClickedOk)
+ON_BN_CLICKED(IDC_BUTTON_7, &CMy037_MFCDlg::OnBnClickedButton7)
+ON_BN_CLICKED(IDC_BUTTON_8, &CMy037_MFCDlg::OnBnClickedButton8)
 END_MESSAGE_MAP()
 
 
@@ -100,8 +104,9 @@ BOOL CMy037_MFCDlg::OnInitDialog()
 	// TODO:  在此添加额外的初始化代码
 	/*HWND h = ::GetDlgItem(m_hWnd, IDC_EDIT1);
 	::SetWindowText(h, L"0.");*/
+	EDIT.SetWindowText(L"0.");
 
-	this->GetDlgItem(IDC_EDIT1)->SetWindowText(L"0.");
+	//this->GetDlgItem(IDC_EDIT1)->SetWindowText(L"0.");
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -155,4 +160,17 @@ HCURSOR CMy037_MFCDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+void CMy037_MFCDlg::OnBnClickedButton7()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"7";
+	UpdateData(false);
+}
 
+
+void CMy037_MFCDlg::OnBnClickedButton8()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"8";
+	UpdateData(false);
+}
