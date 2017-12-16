@@ -14,6 +14,7 @@
     <ProjectGuid>{4B344734-1439-4F18-BFCB-965FEC7C13A4}</ProjectGuid>
     <RootNamespace>My038_字符串转</RootNamespace>
     <Keyword>MFCProj</Keyword>
+    <ProjectName>039_字符串转</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
