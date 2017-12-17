@@ -32,10 +32,16 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 //	afx_msg void OnBnClickedOk();
-	afx_msg void OnEnChangeEdit1();
+//	afx_msg void OnEnChangeEdit1();
 	CEdit EDIT;
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton7();
 	CString EDIT_CS;
 	afx_msg void OnBnClickedButton8();
+	afx_msg void OnBnClickedButton21();
+	afx_msg void OnBnClickedButtonBs();
+	afx_msg void OnBnClickedButtonCe();
+	afx_msg void OnBnClickedButtonC();
+	afx_msg void OnBnClickedButtonZf();
+	afx_msg void OnEnChangeEdit1();
 };

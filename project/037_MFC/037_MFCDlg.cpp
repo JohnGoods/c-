@@ -67,6 +67,11 @@ BEGIN_MESSAGE_MAP(CMy037_MFCDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 ON_BN_CLICKED(IDC_BUTTON_7, &CMy037_MFCDlg::OnBnClickedButton7)
 ON_BN_CLICKED(IDC_BUTTON_8, &CMy037_MFCDlg::OnBnClickedButton8)
+ON_BN_CLICKED(IDC_BUTTON_BS, &CMy037_MFCDlg::OnBnClickedButtonBs)
+ON_BN_CLICKED(IDC_BUTTON_CE, &CMy037_MFCDlg::OnBnClickedButtonCe)
+ON_BN_CLICKED(IDC_BUTTON_C, &CMy037_MFCDlg::OnBnClickedButtonC)
+ON_BN_CLICKED(IDC_BUTTON_ZF, &CMy037_MFCDlg::OnBnClickedButtonZf)
+ON_EN_CHANGE(IDC_EDIT1, &CMy037_MFCDlg::OnEnChangeEdit1)
 END_MESSAGE_MAP()
 
 
@@ -173,4 +178,59 @@ void CMy037_MFCDlg::OnBnClickedButton8()
 	// TODO:  在此添加控件通知处理程序代码
 	EDIT_CS += L"8";
 	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonBs()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS.GetBuffer()[EDIT_CS.GetLength() - 1] = 0;
+	EDIT_CS.ReleaseBuffer();
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonCe()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS = _T("");
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonC()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	OnBnClickedButtonCe();
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonZf()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	const TCHAR* ps = EDIT_CS.GetBuffer();
+	if (ps[0] == '-'){
+		ps++;
+		EDIT_CS = ps;
+	}
+	else{
+		CString s;
+		s = _T("-");
+		s += EDIT_CS;
+		EDIT_CS = s;
+	}
+	EDIT_CS.ReleaseBuffer();
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnEnChangeEdit1()
+{
+	// TODO:  如果该控件是 RICHEDIT 控件，它将不
+	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
+	// 函数并调用 CRichEditCtrl().SetEventMask()，
+	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
+
+	// TODO:  在此添加控件通知处理程序代码
+	UpdateData(true);
 }
