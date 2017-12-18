@@ -12,6 +12,7 @@
 #endif
 
 
+
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
 class CAboutDlg : public CDialogEx
@@ -67,11 +68,25 @@ BEGIN_MESSAGE_MAP(CMy037_MFCDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 ON_BN_CLICKED(IDC_BUTTON_7, &CMy037_MFCDlg::OnBnClickedButton7)
 ON_BN_CLICKED(IDC_BUTTON_8, &CMy037_MFCDlg::OnBnClickedButton8)
+ON_BN_CLICKED(IDC_BUTTON_9, &CMy037_MFCDlg::OnBnClickedButton9)
+ON_BN_CLICKED(IDC_BUTTON_4, &CMy037_MFCDlg::OnBnClickedButton4)
 ON_BN_CLICKED(IDC_BUTTON_BS, &CMy037_MFCDlg::OnBnClickedButtonBs)
 ON_BN_CLICKED(IDC_BUTTON_CE, &CMy037_MFCDlg::OnBnClickedButtonCe)
 ON_BN_CLICKED(IDC_BUTTON_C, &CMy037_MFCDlg::OnBnClickedButtonC)
 ON_BN_CLICKED(IDC_BUTTON_ZF, &CMy037_MFCDlg::OnBnClickedButtonZf)
 ON_EN_CHANGE(IDC_EDIT1, &CMy037_MFCDlg::OnEnChangeEdit1)
+ON_BN_CLICKED(IDC_BUTTON_5, &CMy037_MFCDlg::OnBnClickedButton5)
+ON_BN_CLICKED(IDC_BUTTON_6, &CMy037_MFCDlg::OnBnClickedButton6)
+ON_BN_CLICKED(IDC_BUTTON_1, &CMy037_MFCDlg::OnBnClickedButton1)
+ON_BN_CLICKED(IDC_BUTTON_2, &CMy037_MFCDlg::OnBnClickedButton2)
+ON_BN_CLICKED(IDC_BUTTON_3, &CMy037_MFCDlg::OnBnClickedButton3)
+ON_BN_CLICKED(IDC_BUTTON_0, &CMy037_MFCDlg::OnBnClickedButton0)
+ON_BN_CLICKED(IDC_BUTTON_DIAN, &CMy037_MFCDlg::OnBnClickedButtonDian)
+ON_BN_CLICKED(IDC_BUTTON_CHU, &CMy037_MFCDlg::OnBnClickedButtonChu)
+ON_BN_CLICKED(IDC_BUTTON_CHENG, &CMy037_MFCDlg::OnBnClickedButtonCheng)
+ON_BN_CLICKED(IDC_BUTTON_JIAN, &CMy037_MFCDlg::OnBnClickedButtonJian)
+ON_BN_CLICKED(IDC_BUTTON_JIA, &CMy037_MFCDlg::OnBnClickedButtonJia)
+ON_BN_CLICKED(IDC_BUTTON_DENG, &CMy037_MFCDlg::OnBnClickedButtonDeng)
 END_MESSAGE_MAP()
 
 
@@ -109,7 +124,7 @@ BOOL CMy037_MFCDlg::OnInitDialog()
 	// TODO:  在此添加额外的初始化代码
 	/*HWND h = ::GetDlgItem(m_hWnd, IDC_EDIT1);
 	::SetWindowText(h, L"0.");*/
-	EDIT.SetWindowText(L"0.");
+	EDIT.SetWindowText(L"");
 
 	//this->GetDlgItem(IDC_EDIT1)->SetWindowText(L"0.");
 
@@ -168,6 +183,7 @@ HCURSOR CMy037_MFCDlg::OnQueryDragIcon()
 void CMy037_MFCDlg::OnBnClickedButton7()
 {
 	// TODO:  在此添加控件通知处理程序代码
+	UpdateData(TRUE);
 	EDIT_CS += L"7";
 	UpdateData(false);
 }
@@ -176,6 +192,7 @@ void CMy037_MFCDlg::OnBnClickedButton7()
 void CMy037_MFCDlg::OnBnClickedButton8()
 {
 	// TODO:  在此添加控件通知处理程序代码
+	UpdateData(TRUE);
 	EDIT_CS += L"8";
 	UpdateData(false);
 }
@@ -193,6 +210,7 @@ void CMy037_MFCDlg::OnBnClickedButtonBs()
 void CMy037_MFCDlg::OnBnClickedButtonCe()
 {
 	// TODO:  在此添加控件通知处理程序代码
+	UpdateData(TRUE);
 	EDIT_CS = _T("");
 	UpdateData(false);
 }
@@ -208,6 +226,7 @@ void CMy037_MFCDlg::OnBnClickedButtonC()
 void CMy037_MFCDlg::OnBnClickedButtonZf()
 {
 	// TODO:  在此添加控件通知处理程序代码
+	UpdateData(TRUE);
 	const TCHAR* ps = EDIT_CS.GetBuffer();
 	if (ps[0] == '-'){
 		ps++;
@@ -233,4 +252,187 @@ void CMy037_MFCDlg::OnEnChangeEdit1()
 
 	// TODO:  在此添加控件通知处理程序代码
 	UpdateData(true);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton9()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"9";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton4()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"4";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton5()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"5";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton6()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"6";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton1()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"1";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton2()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"2";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton3()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"3";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButton0()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	EDIT_CS += L"0";
+	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonDian()
+{
+	UpdateData(TRUE);
+	// TODO:  在此添加控件通知处理程序代码
+	if (-1 == EDIT_CS.Find(L'.'))
+	{
+		EDIT_CS += L".";
+	}
+	UpdateData(false);
+}
+
+//除
+void CMy037_MFCDlg::OnBnClickedButtonChu()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SaveFirstValue();
+	mFlag = FLAG_CHU;
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonCheng()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SaveFirstValue();
+	mFlag = FLAG_CHENG;
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonJian()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SaveFirstValue();
+	mFlag = FLAG_JIAN;
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonJia()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SaveFirstValue();
+	mFlag = FLAG_JIA;
+}
+
+
+void CMy037_MFCDlg::OnBnClickedButtonDeng()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	Calculator();
+}
+
+//保存第一个输入值
+void CMy037_MFCDlg::SaveFirstValue()
+{
+	UpdateData(TRUE);
+	mNum1 = _wtof(EDIT_CS);
+	EDIT_CS = L"";
+	UpdateData(FALSE);
+}
+
+//计算结果
+void CMy037_MFCDlg::Calculator()
+{
+	UpdateData(TRUE);
+	mNum2 = _wtof(EDIT_CS);
+	double result = 0.0f;
+	switch (mFlag)
+	{
+	case FLAG_JIA:						//加  
+		result = mNum1 + mNum2;
+		break;
+	case FLAG_JIAN:						//减 
+		result = mNum1 - mNum2;
+		break;
+	case FLAG_CHENG:					//乘  
+		result = mNum1 * mNum2;
+		break;
+	case FLAG_CHU:						//除  
+		if (mNum2 == 0.0f)
+		{
+			result = mNum1;
+		}
+		else
+		{
+			result = mNum1 / mNum2;
+		}
+		break;
+	case FLAG_PINGFANG:					//平方 
+		result = mNum2 * mNum2;
+		break;
+	case FLAG_KAIFANG:					//开方  
+		result = sqrt(mNum2);
+		break;
+	default:
+		break;
+	}
+	//如果浮点数其实是个整数,就显示为整数
+	if (result - int(result) <= 1e-5)
+	{
+		EDIT_CS.Format(L"%d", (int)result);
+	}
+	else
+	{
+		EDIT_CS.Format(L"%f", result);
+	}
+	UpdateData(FALSE);
+
+	mNum1 = result;
+	mNum2 = 0.0f;
 }
