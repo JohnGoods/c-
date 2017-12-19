@@ -105,6 +105,7 @@ ON_BN_CLICKED(IDC_BUTTON_BAIFEN, &CMy037_MFCDlg::OnBnClickedButtonBaifen)
 ON_BN_CLICKED(IDC_BUTTON_ONE_X, &CMy037_MFCDlg::OnBnClickedButtonOneX)
 ON_COMMAND(ID_32777, &CMy037_MFCDlg::OnAbout)
 ON_COMMAND(ID_32771, &CMy037_MFCDlg::OnMenuCopy)
+ON_COMMAND(ID_32772, &CMy037_MFCDlg::OnMenuPaste)
 END_MESSAGE_MAP()
 
 
@@ -473,17 +474,55 @@ void CAboutDlg::OnHelp1()
 //复制
 void CMy037_MFCDlg::OnMenuCopy()
 {
-	// TODO:  在此添加命令处理程序代码
+	// TODO: 在此添加命令处理程序代码
 	char sc[] = "复制测试";
 	HGLOBAL hmem = NULL;
-	if (OpenClipboard()){	//是否成功打开剪贴板
-		if (EmptyClipboard()){
-			hmem = GlobalAlloc(GHND, sizeof(sc));	//清空成功,则继续
+	if (OpenClipboard()) //是否成功打开剪帖板
+	{
+		if (EmptyClipboard())//清空成功，则继续
+		{
+			hmem = GlobalAlloc(GHND, sizeof(sc));//memalloc strlen+1 \0
 			char* pmem = (char*)GlobalLock(hmem);
 			memcpy(pmem, sc, sizeof(sc));
+			// SetClipboardData()
 			SetClipboardData(CF_TEXT, hmem);
+			//关闭剪贴板
 			CloseClipboard();
-			GlobalFree(pmem);	//释放
+			GlobalUnlock(hmem);
+			// GlobalFree(pmem);//释放全局内存
+
 		}
 	}
+}
+
+//粘贴
+void CMy037_MFCDlg::OnMenuPaste()
+{
+	// TODO: 在此添加命令处理程序代码
+	//一、 判断剪贴数据格式是否是我们需要的
+	HGLOBAL hmem = NULL;
+	char s[256] = "";
+	if (IsClipboardFormatAvailable(CF_TEXT)) //CF_UNICODETEXT
+	{
+		//二、 打开剪贴板
+		if (OpenClipboard())
+		{
+			//三、 获取剪贴板句柄
+			hmem = GetClipboardData(CF_TEXT);
+			if (hmem)
+			{
+
+				//四、 锁定全局内存获取缓冲区指针，
+				char* ps = (char*)GlobalLock(hmem);
+				//取出数据
+				memcpy(s, ps, GlobalSize(hmem));
+			}
+		}
+	}
+
+	//五、 关闭剪贴板，以使其它程序可以访问，释放掉内存锁
+	CloseClipboard();
+	GlobalUnlock(hmem);
+	EDIT_CS += s;
+	UpdateData(false);
 }

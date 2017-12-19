@@ -76,6 +76,7 @@ public:
 	int PressNum(int nNum);
 	afx_msg void OnAbout();
 	afx_msg void OnMenuCopy();
+	afx_msg void OnMenuPaste();
 };
 
 
