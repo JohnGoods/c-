@@ -14,6 +14,9 @@ public:
 
 // 对话框数据
 	enum { IDD = IDD_MY037_MFC_DIALOG };
+	//运算符 宏定义
+	enum OperatorNum{ONull=0,OAdd=1,OSub=2,OMul=3,ODiv=4};
+
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
 
@@ -64,9 +67,9 @@ public:
 	// 用于获取编辑框的值
 	int m_nowNum;
 	// 用于计算四则运算
-	int plan(int nOperator);
+	int plan(OperatorNum nOperator);
 	// 存放上次按下的运算符值
-	int m_nPreOperator = 0;
+	OperatorNum m_nPreOperator = ONull;
 	// 判断最后一次按下的是否运算符 是=1 否=0
 	bool LastPressIsOperater;
 	// 表示按下了0-9

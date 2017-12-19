@@ -53,7 +53,7 @@ CMy037_MFCDlg::CMy037_MFCDlg(CWnd* pParent /*=NULL*/)
 	, EDIT_CS(_T(""))
 	, m_nPlanNum(0)
 	, m_nowNum(0)
-	, m_nPreOperator(0)
+	, m_nPreOperator(ONull)
 	, LastPressIsOperater(false)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
@@ -321,27 +321,25 @@ void CMy037_MFCDlg::OnBnClickedButtonDian()
 //除法
 void CMy037_MFCDlg::OnBnClickedButtonChu()
 {
-
+	plan(ODiv);
 }
 
 //乘法
 void CMy037_MFCDlg::OnBnClickedButtonCheng()
 {
-
-
+	plan(OMul);
 }
 
 //减法
 void CMy037_MFCDlg::OnBnClickedButtonJian()
 {
-
-
+	plan(OSub);
 }
 
 //加法
 void CMy037_MFCDlg::OnBnClickedButtonJia()
 {
-	plan(1);
+	plan(OAdd);
 }
 
 //MC
@@ -393,7 +391,7 @@ void CMy037_MFCDlg::OnBnClickedButtonDeng()
 }
 
 // 用于计算四则运算
-int CMy037_MFCDlg::plan(int nOperator)
+int CMy037_MFCDlg::plan(OperatorNum nOperator)
 {
 	//如果上次按下的是运算符,则更新m_nPreOperator的值,并退出此函数
 	if (LastPressIsOperater){
@@ -404,23 +402,26 @@ int CMy037_MFCDlg::plan(int nOperator)
 	}
 	m_nowNum = _wtoi(EDIT_CS);	//字符转数字
 	switch (m_nPreOperator){
-	case 0:	//空运算
+	case ONull:	//空运算
 		m_nPlanNum = m_nowNum;	//当前编辑框的值
 		break;
-	case 1:	//+
+	case OAdd:	//+
 		m_nPlanNum += m_nowNum;
 		break;
-	case 2:	//-
+	case OSub:	//-
+		m_nPlanNum = m_nPlanNum - m_nowNum;
 		break;
-	case 3:	//*
+	case OMul:	//*
+		m_nPlanNum = m_nPlanNum * m_nowNum;
 		break;
-	case 4:	//  /
+	case ODiv:	//  /
+		m_nPlanNum = m_nPlanNum / m_nowNum;
 		break;
 	}
 	m_nPreOperator = nOperator;
+	LastPressIsOperater = 1;
 	EDIT_CS.Format(L"%d", m_nPlanNum);
 	UpdateData(false);
-	LastPressIsOperater = 1;
 	return 0;
 }
 
