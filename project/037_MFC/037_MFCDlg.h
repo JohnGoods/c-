@@ -59,6 +59,16 @@ public:
 	afx_msg void OnBnClickedButtonSqrt();
 	afx_msg void OnBnClickedButtonBaifen();
 	afx_msg void OnBnClickedButtonOneX();
+	// 累计数值,存放计算结果
+	int m_nPlanNum;
+	// 用于获取编辑框的值
+	int m_nowNum;
+	// 用于计算四则运算
+	int plan(int nOperator);
+	// 存放上次按下的运算符值
+	int m_nPreOperator = 0;
+	// 判断最后一次按下的是否运算符 是=1 否=0
+	bool LastPressIsOperater;
 };
 
 
