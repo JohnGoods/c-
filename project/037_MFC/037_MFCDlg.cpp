@@ -104,6 +104,7 @@ ON_BN_CLICKED(IDC_BUTTON_SQRT, &CMy037_MFCDlg::OnBnClickedButtonSqrt)
 ON_BN_CLICKED(IDC_BUTTON_BAIFEN, &CMy037_MFCDlg::OnBnClickedButtonBaifen)
 ON_BN_CLICKED(IDC_BUTTON_ONE_X, &CMy037_MFCDlg::OnBnClickedButtonOneX)
 ON_COMMAND(ID_32777, &CMy037_MFCDlg::OnAbout)
+ON_COMMAND(ID_32771, &CMy037_MFCDlg::OnMenuCopy)
 END_MESSAGE_MAP()
 
 
@@ -467,4 +468,22 @@ void CMy037_MFCDlg::OnAbout()
 void CAboutDlg::OnHelp1()
 {
 	MessageBox(L"21111");
+}
+
+//复制
+void CMy037_MFCDlg::OnMenuCopy()
+{
+	// TODO:  在此添加命令处理程序代码
+	char sc[] = "复制测试";
+	HGLOBAL hmem = NULL;
+	if (OpenClipboard()){	//是否成功打开剪贴板
+		if (EmptyClipboard()){
+			hmem = GlobalAlloc(GHND, sizeof(sc));	//清空成功,则继续
+			char* pmem = (char*)GlobalLock(hmem);
+			memcpy(pmem, sc, sizeof(sc));
+			SetClipboardData(CF_TEXT, hmem);
+			CloseClipboard();
+			GlobalFree(pmem);	//释放
+		}
+	}
 }
