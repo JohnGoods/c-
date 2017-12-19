@@ -29,6 +29,8 @@ public:
 // 实现
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnHelp1();
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(CAboutDlg::IDD)
@@ -41,6 +43,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
+	ON_COMMAND(ID_32776, &CAboutDlg::OnHelp1)
 END_MESSAGE_MAP()
 
 
@@ -100,6 +103,7 @@ ON_BN_CLICKED(IDC_BUTTONMJIA, &CMy037_MFCDlg::OnBnClickedButtonmjia)
 ON_BN_CLICKED(IDC_BUTTON_SQRT, &CMy037_MFCDlg::OnBnClickedButtonSqrt)
 ON_BN_CLICKED(IDC_BUTTON_BAIFEN, &CMy037_MFCDlg::OnBnClickedButtonBaifen)
 ON_BN_CLICKED(IDC_BUTTON_ONE_X, &CMy037_MFCDlg::OnBnClickedButtonOneX)
+ON_COMMAND(ID_32777, &CMy037_MFCDlg::OnAbout)
 END_MESSAGE_MAP()
 
 
@@ -447,4 +451,20 @@ int CMy037_MFCDlg::PressNum(int nNum)
 	LastPressIsOperater = 0;
 	UpdateData(false);
 	return 0;
+}
+CAboutDlg about; //全局变量
+
+//关于窗口
+void CMy037_MFCDlg::OnAbout()
+{
+	if (about.m_hWnd == 0){	//0就是没被创建
+		about.Create(IDD_ABOUTBOX, this);
+	}
+	about.ShowWindow(SW_SHOW);
+}
+
+
+void CAboutDlg::OnHelp1()
+{
+	MessageBox(L"21111");
 }

@@ -74,6 +74,7 @@ public:
 	bool LastPressIsOperater;
 	// 表示按下了0-9
 	int PressNum(int nNum);
+	afx_msg void OnAbout();
 };
 
 
