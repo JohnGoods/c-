@@ -281,8 +281,12 @@ void CMy037_MFCDlg::OnBnClickedButtonCe()
 
 //C
 void CMy037_MFCDlg::OnBnClickedButtonC()
-{
-	// TODO:  在此添加控件通知处理程序代码
+{	
+	//清零代码
+	LastPressIsOperater = 0; //表示未按下运算符
+	m_nPlanNum = 0;
+	m_nowNum = 0;
+	m_nPreOperator = this -> ONull;
 	OnBnClickedButtonCe();
 }
 
@@ -372,10 +376,10 @@ void CMy037_MFCDlg::OnBnClickedButtonSqrt()
 	
 }
 
-//百分比
+//取模
 void CMy037_MFCDlg::OnBnClickedButtonBaifen()
 {
-	
+	plan(OMod);
 }
 
 //1/x
@@ -416,6 +420,9 @@ int CMy037_MFCDlg::plan(OperatorNum nOperator)
 		break;
 	case ODiv:	//  /
 		m_nPlanNum = m_nPlanNum / m_nowNum;
+		break;
+	case OMod:	//  取模
+		m_nPlanNum = m_nPlanNum % m_nowNum;
 		break;
 	}
 	m_nPreOperator = nOperator;

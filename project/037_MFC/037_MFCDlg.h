@@ -15,7 +15,7 @@ public:
 // 对话框数据
 	enum { IDD = IDD_MY037_MFC_DIALOG };
 	//运算符 宏定义
-	enum OperatorNum{ONull=0,OAdd=1,OSub=2,OMul=3,ODiv=4};
+	enum OperatorNum{ONull=0,OAdd=1,OSub=2,OMul=3,ODiv=4,OMod=5};
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
