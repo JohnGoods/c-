@@ -204,77 +204,61 @@ void CMy037_MFCDlg::OnEnChangeEdit1()
 //数字0
 void CMy037_MFCDlg::OnBnClickedButton0()
 {
-	EDIT_CS += L"0";
-	UpdateData(false);
+	PressNum(0);
 }
 
 //数字1
 void CMy037_MFCDlg::OnBnClickedButton1()
 {
-	EDIT_CS += L"1";
-	UpdateData(false);
+	PressNum(1);
 }
 
 //数字2
 void CMy037_MFCDlg::OnBnClickedButton2()
 {
-	EDIT_CS += L"2";
-	UpdateData(false);
+	PressNum(2);
 }
 
 //数字3
 void CMy037_MFCDlg::OnBnClickedButton3()
 {
-	EDIT_CS += L"3";
-	UpdateData(false);
+	PressNum(3);
 }
 
 //数字4
 void CMy037_MFCDlg::OnBnClickedButton4()
 {
-	EDIT_CS += L"4";
-	UpdateData(false);
+	PressNum(4);
 }
 
 //数字5
 void CMy037_MFCDlg::OnBnClickedButton5()
 {
-	EDIT_CS += L"5";
-	UpdateData(false);
+	PressNum(5);
 }
 
 //数字6
 void CMy037_MFCDlg::OnBnClickedButton6()
 {
-	EDIT_CS += L"6";
-	UpdateData(false);
+	PressNum(6);
 }
 
 //数字7
 void CMy037_MFCDlg::OnBnClickedButton7()
 {
-	if (LastPressIsOperater){	//上次按下的是运算符,重新赋值
-		EDIT_CS += L"";
-	}
-	else{
-		EDIT_CS += L"7";	//上次按下不是运算符
-	}
-	LastPressIsOperater = 0;
-	UpdateData(false);
+	PressNum(7);
 }
 
 //数字8
 void CMy037_MFCDlg::OnBnClickedButton8()
 {
-	EDIT_CS += L"8";
-	UpdateData(false);
+	PressNum(8);
 }
 
 //数字9
 void CMy037_MFCDlg::OnBnClickedButton9()
 {
-	EDIT_CS += L"9";
-	UpdateData(false);
+	PressNum(9);
 }
 
 //退格
@@ -411,6 +395,13 @@ void CMy037_MFCDlg::OnBnClickedButtonDeng()
 // 用于计算四则运算
 int CMy037_MFCDlg::plan(int nOperator)
 {
+	//如果上次按下的是运算符,则更新m_nPreOperator的值,并退出此函数
+	if (LastPressIsOperater){
+		m_nPreOperator = nOperator;
+		/*EDIT_CS.Format(L"%d", nOperator);
+		UpdateData(false);*/
+		return 1;
+	}
 	m_nowNum = _wtoi(EDIT_CS);	//字符转数字
 	switch (m_nPreOperator){
 	case 0:	//空运算
@@ -430,5 +421,22 @@ int CMy037_MFCDlg::plan(int nOperator)
 	EDIT_CS.Format(L"%d", m_nPlanNum);
 	UpdateData(false);
 	LastPressIsOperater = 1;
+	return 0;
+}
+
+
+// 表示按下了0-9
+int CMy037_MFCDlg::PressNum(int nNum)
+{
+	CString ts;
+	ts.Format(L"%d", nNum);
+	if (LastPressIsOperater){	//上次按下的是运算符,重新赋值
+		EDIT_CS = ts;
+	}
+	else{
+		EDIT_CS += ts;	//上次按下不是运算符
+	}
+	LastPressIsOperater = 0;
+	UpdateData(false);
 	return 0;
 }

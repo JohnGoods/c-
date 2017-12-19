@@ -69,6 +69,8 @@ public:
 	int m_nPreOperator = 0;
 	// 判断最后一次按下的是否运算符 是=1 否=0
 	bool LastPressIsOperater;
+	// 表示按下了0-9
+	int PressNum(int nNum);
 };
 
 
