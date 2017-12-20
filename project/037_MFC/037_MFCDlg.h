@@ -4,6 +4,7 @@
 
 #pragma once
 #include "afxwin.h"
+#include "NumEdit.h"	//基类
 
 // CMy037_MFCDlg 对话框
 class CMy037_MFCDlg : public CDialogEx
@@ -32,7 +33,7 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 public:
-	CEdit EDIT;
+	CNumEdit EDIT;
 	CString EDIT_CS;
 	afx_msg void OnBnClickedButtonBs();
 	afx_msg void OnBnClickedButtonCe();

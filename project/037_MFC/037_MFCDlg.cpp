@@ -199,6 +199,8 @@ HCURSOR CMy037_MFCDlg::OnQueryDragIcon()
 //显示Edit
 void CMy037_MFCDlg::OnEnChangeEdit1()
 {
+	/** 不派生基类的做法
+
 	int nselStart, nselEnd;
 	WCHAR ts[256] = L"";
 	EDIT.GetWindowText(ts, 256);
@@ -233,7 +235,7 @@ void CMy037_MFCDlg::OnEnChangeEdit1()
 		//EDIT让它更新至窗口
 		UpdateData(false);
 		EDIT.SetSel(nselStart - 1, nselStart - 1);
-	}
+	}*/
 	UpdateData(true);
 }
 
