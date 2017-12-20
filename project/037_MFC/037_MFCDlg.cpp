@@ -475,17 +475,40 @@ void CAboutDlg::OnHelp1()
 void CMy037_MFCDlg::OnMenuCopy()
 {
 	// TODO: 在此添加命令处理程序代码
-	char sc[] = "复制测试";
+	// TODO: 在此添加命令处理程序代码
+	//char sc[222]="";
+	//USES_CONVERSION;
+	//strcpy(sc,W2A(m_edt_cs.GetBuffer()));
+	//HGLOBAL hmem=NULL;
+	// if (OpenClipboard()) //是否成功打开剪帖板
+	// {
+	//  if (EmptyClipboard())//清空成功，则继续
+	//  {
+	//        hmem=GlobalAlloc(GHND,sizeof(sc));//memalloc strlen+1 \0
+	//	 char* pmem= (char*)GlobalLock(hmem);
+	//	 memcpy(pmem,sc,sizeof(sc));
+	//	 // SetClipboardData()
+	//	 SetClipboardData(CF_TEXT,hmem);
+	//	 //关闭剪贴板
+	//        CloseClipboard();
+	//	 GlobalUnlock(hmem);
+	//	// GlobalFree(pmem);//释放全局内存
+
+	//  }
+	// }
+
+	//--------
+
 	HGLOBAL hmem = NULL;
 	if (OpenClipboard()) //是否成功打开剪帖板
 	{
 		if (EmptyClipboard())//清空成功，则继续
 		{
-			hmem = GlobalAlloc(GHND, sizeof(sc));//memalloc strlen+1 \0
-			char* pmem = (char*)GlobalLock(hmem);
-			memcpy(pmem, sc, sizeof(sc));
+			hmem = GlobalAlloc(GHND, (EDIT_CS.GetLength() + 1) * 2);//memalloc strlen+1 \0
+			wchar_t* pmem = (WCHAR*)GlobalLock(hmem);
+			memcpy(pmem, EDIT_CS.GetBuffer(), (EDIT_CS.GetLength() + 1) * 2);
 			// SetClipboardData()
-			SetClipboardData(CF_TEXT, hmem);
+			SetClipboardData(CF_UNICODETEXT, hmem);
 			//关闭剪贴板
 			CloseClipboard();
 			GlobalUnlock(hmem);
@@ -518,11 +541,13 @@ void CMy037_MFCDlg::OnMenuPaste()
 				memcpy(s, ps, GlobalSize(hmem));
 			}
 		}
+
 	}
+
 
 	//五、 关闭剪贴板，以使其它程序可以访问，释放掉内存锁
 	CloseClipboard();
 	GlobalUnlock(hmem);
-	EDIT_CS += s;
+	EDIT_CS = s;
 	UpdateData(false);
 }
