@@ -199,11 +199,41 @@ HCURSOR CMy037_MFCDlg::OnQueryDragIcon()
 //显示Edit
 void CMy037_MFCDlg::OnEnChangeEdit1()
 {
-	// TODO:  如果该控件是 RICHEDIT 控件，它将不
-	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
-	// 函数并调用 CRichEditCtrl().SetEventMask()，
-	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
-	// TODO:  在此添加控件通知处理程序代码
+	int nselStart, nselEnd;
+	WCHAR ts[256] = L"";
+	EDIT.GetWindowText(ts, 256);
+	EDIT.GetSel(nselStart, nselEnd);
+	int num = 0;
+	if (nselStart - 1 < 0){		//防止越界
+		return;	
+	}
+	WCHAR c = ts[nselStart - 1];//获取的最后输入的字符
+	//判断 是数字，或者小数点才让输入
+	if (c >= '0'&&c <= '9' || c == '.'){
+		if (c == '.'){
+			//判断字串里的小数点的个数 个数为1 大于1
+			for (int i = 0; i <= wcslen(ts); i++)
+			{
+				if (ts[i] == '.')
+				{
+					num++;
+				}
+			}
+			if (num > 1)
+			{
+				//m_edt_cs让它更新至窗口
+				UpdateData(false);
+				EDIT.SetSel(nselStart - 1, nselStart - 1);
+				return;
+			}
+		}
+		UpdateData(true);//更新窗口数据至变量
+	}
+	else{//是字母和小数点
+		//EDIT让它更新至窗口
+		UpdateData(false);
+		EDIT.SetSel(nselStart - 1, nselStart - 1);
+	}
 	UpdateData(true);
 }
 
