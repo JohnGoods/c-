@@ -10,7 +10,7 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
+CMy037_MFCDlg * pwindlg;
 
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
@@ -144,6 +144,7 @@ BOOL CMy037_MFCDlg::OnInitDialog()
 	::SetWindowText(h, L"0.");*/
 	EDIT.SetWindowText(L"");
 	//this->GetDlgItem(IDC_EDIT1)->SetWindowText(L"0.");
+	pwindlg = this;
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -236,7 +237,10 @@ void CMy037_MFCDlg::OnEnChangeEdit1()
 		UpdateData(false);
 		EDIT.SetSel(nselStart - 1, nselStart - 1);
 	}*/
-	UpdateData(true);
+	UpdateData();
+	/*WCHAR ws[256];
+	EDIT.GetWindowText(ws, EDIT.GetWindowTextLength() * 2 + 1);
+	EDIT_CS.Format(L"%s", ws);*/
 }
 
 //数字0
@@ -536,9 +540,9 @@ void CMy037_MFCDlg::OnMenuCopy()
 	{
 		if (EmptyClipboard())//清空成功，则继续
 		{
-			hmem = GlobalAlloc(GHND, (EDIT_CS.GetLength() + 1) * 2);//memalloc strlen+1 \0
+			hmem = GlobalAlloc(GHND, (pwindlg->EDIT_CS.GetLength() + 1) * 2);//memalloc strlen+1 \0
 			wchar_t* pmem = (WCHAR*)GlobalLock(hmem);
-			memcpy(pmem, EDIT_CS.GetBuffer(), (EDIT_CS.GetLength() + 1) * 2);
+			memcpy(pmem, pwindlg->EDIT_CS.GetBuffer(), (pwindlg->EDIT_CS.GetLength() + 1) * 2);
 			// SetClipboardData()
 			SetClipboardData(CF_UNICODETEXT, hmem);
 			//关闭剪贴板

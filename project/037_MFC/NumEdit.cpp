@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "NumEdit.h"
-
-
+#include "resource.h"
+#include "037_MFCDlg.h"
+extern CMy037_MFCDlg* pwindlg;
 CNumEdit::CNumEdit()
 {
 }
