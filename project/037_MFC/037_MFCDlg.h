@@ -78,6 +78,7 @@ public:
 	afx_msg void OnAbout();
 	afx_msg void OnMenuCopy();
 	afx_msg void OnMenuPaste();
+	afx_msg void OnMenuWhdtop();
 };
 
 

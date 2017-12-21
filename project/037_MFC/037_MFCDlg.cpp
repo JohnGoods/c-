@@ -106,6 +106,7 @@ ON_BN_CLICKED(IDC_BUTTON_ONE_X, &CMy037_MFCDlg::OnBnClickedButtonOneX)
 ON_COMMAND(ID_32777, &CMy037_MFCDlg::OnAbout)
 ON_COMMAND(ID_32771, &CMy037_MFCDlg::OnMenuCopy)
 ON_COMMAND(ID_32772, &CMy037_MFCDlg::OnMenuPaste)
+ON_COMMAND(ID_MENU_WHDTOP, &CMy037_MFCDlg::OnMenuWhdtop)
 END_MESSAGE_MAP()
 
 
@@ -586,4 +587,22 @@ void CMy037_MFCDlg::OnMenuPaste()
 	GlobalUnlock(hmem);
 	EDIT_CS = s;
 	UpdateData(false);
+}
+
+
+void CMy037_MFCDlg::OnMenuWhdtop()
+{
+	// TODO:  在此添加命令处理程序代码
+	UINT istate = GetMenu()->GetMenuState(ID_MENU_WHDTOP, MF_CHECKED);
+	if (istate == MF_CHECKED){
+		//去掉勾
+		GetMenu()->CheckMenuItem(ID_MENU_WHDTOP, MF_UNCHECKED);
+		//CheckMenuRadioItem();
+		SetWindowPos(&wndNoTopMost, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+	}
+	else{
+		//窗口置顶
+		GetMenu()->CheckMenuItem(ID_MENU_WHDTOP, MF_CHECKED);
+		SetWindowPos(&wndTopMost, 0, 0, 0, 0,SWP_NOMOVE|SWP_NOSIZE);
+	}
 }
