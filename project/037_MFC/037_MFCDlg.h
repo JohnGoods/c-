@@ -5,6 +5,7 @@
 #pragma once
 #include "afxwin.h"
 #include "NumEdit.h"	//基类
+#include "MY_Dialog.h"
 
 // CMy037_MFCDlg 对话框
 class CMy037_MFCDlg : public CDialogEx
@@ -35,6 +36,7 @@ protected:
 public:
 	CNumEdit EDIT;
 	CString EDIT_CS;
+	CMY_Dialog dlg;
 	afx_msg void OnBnClickedButtonBs();
 	afx_msg void OnBnClickedButtonCe();
 	afx_msg void OnBnClickedButtonC();
@@ -81,6 +83,7 @@ public:
 	afx_msg void OnMenuWhdtop();
 	afx_msg void OnBnClickedCheckWintop();
 	CButton m_check_wndtop_ctl;
+	afx_msg void OnHelp();
 };
 
 

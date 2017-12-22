@@ -6,6 +6,7 @@
 #include "037_MFC.h"
 #include "037_MFCDlg.h"
 #include "afxdialogex.h"
+#include "MY_Dialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -30,7 +31,6 @@ public:
 protected:
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnHelp1();
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(CAboutDlg::IDD)
@@ -43,7 +43,6 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
-	ON_COMMAND(ID_32776, &CAboutDlg::OnHelp1)
 END_MESSAGE_MAP()
 
 
@@ -109,6 +108,7 @@ ON_COMMAND(ID_32771, &CMy037_MFCDlg::OnMenuCopy)
 ON_COMMAND(ID_32772, &CMy037_MFCDlg::OnMenuPaste)
 ON_COMMAND(ID_MENU_WHDTOP, &CMy037_MFCDlg::OnMenuWhdtop)
 ON_BN_CLICKED(IDC_CHECK_WINTOP, &CMy037_MFCDlg::OnBnClickedCheckWintop)
+ON_COMMAND(ID_32776, &CMy037_MFCDlg::OnHelp)
 END_MESSAGE_MAP()
 
 
@@ -505,12 +505,6 @@ void CMy037_MFCDlg::OnAbout()
 	about.ShowWindow(SW_SHOW);
 }
 
-
-void CAboutDlg::OnHelp1()
-{
-	MessageBox(L"21111");
-}
-
 //¸´ÖÆ
 void CMy037_MFCDlg::OnMenuCopy()
 {
@@ -621,4 +615,13 @@ void CMy037_MFCDlg::OnBnClickedCheckWintop()
 	else{	//Î´Ñ¡ÖÐ
 		SetWindowPos(&wndNoTopMost, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 	}
+}
+
+
+void CMy037_MFCDlg::OnHelp()
+{
+	if (dlg.m_hWnd == 0){
+			dlg.Create(IDD_DIALOG_MINE, this);
+	}
+	dlg.ShowWindow(SW_SHOW);
 }

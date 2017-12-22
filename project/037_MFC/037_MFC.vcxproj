@@ -103,6 +103,7 @@
   <ItemGroup>
     <ClInclude Include="037_MFC.h" />
     <ClInclude Include="037_MFCDlg.h" />
+    <ClInclude Include="MY_Dialog.h" />
     <ClInclude Include="NumEdit.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -111,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="037_MFC.cpp" />
     <ClCompile Include="037_MFCDlg.cpp" />
+    <ClCompile Include="MY_Dialog.cpp" />
     <ClCompile Include="NumEdit.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
