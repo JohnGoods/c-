@@ -79,6 +79,8 @@ public:
 	afx_msg void OnMenuCopy();
 	afx_msg void OnMenuPaste();
 	afx_msg void OnMenuWhdtop();
+	afx_msg void OnBnClickedCheckWintop();
+	CButton m_check_wndtop_ctl;
 };
 
 

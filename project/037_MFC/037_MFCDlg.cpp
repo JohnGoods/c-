@@ -67,6 +67,7 @@ void CMy037_MFCDlg::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_EDIT1, EDIT);
 	DDX_Text(pDX, IDC_EDIT1, EDIT_CS);
+	DDX_Control(pDX, IDC_CHECK_WINTOP, m_check_wndtop_ctl);
 }
 
 BEGIN_MESSAGE_MAP(CMy037_MFCDlg, CDialogEx)
@@ -107,6 +108,7 @@ ON_COMMAND(ID_32777, &CMy037_MFCDlg::OnAbout)
 ON_COMMAND(ID_32771, &CMy037_MFCDlg::OnMenuCopy)
 ON_COMMAND(ID_32772, &CMy037_MFCDlg::OnMenuPaste)
 ON_COMMAND(ID_MENU_WHDTOP, &CMy037_MFCDlg::OnMenuWhdtop)
+ON_BN_CLICKED(IDC_CHECK_WINTOP, &CMy037_MFCDlg::OnBnClickedCheckWintop)
 END_MESSAGE_MAP()
 
 
@@ -145,6 +147,7 @@ BOOL CMy037_MFCDlg::OnInitDialog()
 	::SetWindowText(h, L"0.");*/
 	EDIT.SetWindowText(L"");
 	//this->GetDlgItem(IDC_EDIT1)->SetWindowText(L"0.");
+	m_check_wndtop_ctl.SetCheck(true);	//默认置顶
 	pwindlg = this;
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -604,5 +607,18 @@ void CMy037_MFCDlg::OnMenuWhdtop()
 		//窗口置顶
 		GetMenu()->CheckMenuItem(ID_MENU_WHDTOP, MF_CHECKED);
 		SetWindowPos(&wndTopMost, 0, 0, 0, 0,SWP_NOMOVE|SWP_NOSIZE);
+	}
+}
+
+
+void CMy037_MFCDlg::OnBnClickedCheckWintop()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	int bc = m_check_wndtop_ctl.GetCheck();
+	if (bc){	//选中
+		SetWindowPos(&wndTopMost, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+	}
+	else{	//未选中
+		SetWindowPos(&wndNoTopMost, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 	}
 }
