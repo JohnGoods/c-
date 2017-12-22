@@ -7,6 +7,7 @@
 #include "037_MFCDlg.h"
 #include "afxdialogex.h"
 #include "MY_Dialog.h"
+#include "Dialog_ComboBox.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -618,10 +619,15 @@ void CMy037_MFCDlg::OnBnClickedCheckWintop()
 }
 
 
+
 void CMy037_MFCDlg::OnHelp()
 {
-	if (dlg.m_hWnd == 0){
+	/*if (dlg.m_hWnd == 0){
 			dlg.Create(IDD_DIALOG_MINE, this);
 	}
-	dlg.ShowWindow(SW_SHOW);
+	dlg.ShowWindow(SW_SHOW);*/
+	if (dlg_combobox.m_hWnd == 0){
+		dlg_combobox.Create(IDD_DIALOG_COMBOBOX, this);
+	}
+	dlg_combobox.ShowWindow(SW_SHOW);
 }

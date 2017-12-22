@@ -6,6 +6,7 @@
 #include "afxwin.h"
 #include "NumEdit.h"	//基类
 #include "MY_Dialog.h"
+#include "Dialog_ComboBox.h"
 
 // CMy037_MFCDlg 对话框
 class CMy037_MFCDlg : public CDialogEx
@@ -37,6 +38,7 @@ public:
 	CNumEdit EDIT;
 	CString EDIT_CS;
 	CMY_Dialog dlg;
+	CDialog_ComboBox dlg_combobox;
 	afx_msg void OnBnClickedButtonBs();
 	afx_msg void OnBnClickedButtonCe();
 	afx_msg void OnBnClickedButtonC();
