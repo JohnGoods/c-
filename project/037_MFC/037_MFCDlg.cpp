@@ -9,6 +9,7 @@
 #include "MY_Dialog.h"
 #include "Dialog_ComboBox.h"
 #include "Dialog_ListBox.h"
+#include "Dialog_Slider.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -627,15 +628,21 @@ void CMy037_MFCDlg::OnHelp()
 			dlg.Create(IDD_DIALOG_MINE, this);
 	}
 	dlg.ShowWindow(SW_SHOW);*/
+
 	/*if (dlg_combobox.m_hWnd == 0){
 		dlg_combobox.Create(IDD_DIALOG_COMBOBOX, this);
 	}
 	dlg_combobox.ShowWindow(SW_SHOW);*/
 
-	if (dlg_listbox.m_hWnd == 0){
+	/*if (dlg_listbox.m_hWnd == 0){
 		dlg_listbox.Create(IDD_DIALOG_LISTBOX, this);
 	}
-	dlg_listbox.ShowWindow(SW_SHOW);
+	dlg_listbox.ShowWindow(SW_SHOW);*/
+
+	if (dlg_slider.m_hWnd == 0){
+		dlg_slider.Create(IDD_DIALOG1, this);
+	}
+	dlg_slider.ShowWindow(SW_SHOW);
 
 	
 }

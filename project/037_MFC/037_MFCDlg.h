@@ -8,6 +8,7 @@
 #include "MY_Dialog.h"
 #include "Dialog_ComboBox.h"
 #include "Dialog_ListBox.h"
+#include "Dialog_Slider.h"
 
 
 // CMy037_MFCDlg ¶Ô»°¿ò
@@ -42,6 +43,8 @@ public:
 	CMY_Dialog dlg;
 	CDialog_ComboBox dlg_combobox;
 	CDialog_ListBox dlg_listbox;
+	CDialog_Slider dlg_slider;
+	
 	afx_msg void OnBnClickedButtonBs();
 	afx_msg void OnBnClickedButtonCe();
 	afx_msg void OnBnClickedButtonC();

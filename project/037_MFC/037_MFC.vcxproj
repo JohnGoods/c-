@@ -105,6 +105,7 @@
     <ClInclude Include="037_MFCDlg.h" />
     <ClInclude Include="Dialog_ComboBox.h" />
     <ClInclude Include="Dialog_ListBox.h" />
+    <ClInclude Include="Dialog_Slider.h" />
     <ClInclude Include="MY_Dialog.h" />
     <ClInclude Include="NumEdit.h" />
     <ClInclude Include="Resource.h" />
@@ -116,6 +117,7 @@
     <ClCompile Include="037_MFCDlg.cpp" />
     <ClCompile Include="Dialog_ComboBox.cpp" />
     <ClCompile Include="Dialog_ListBox.cpp" />
+    <ClCompile Include="Dialog_Slider.cpp" />
     <ClCompile Include="MY_Dialog.cpp" />
     <ClCompile Include="NumEdit.cpp" />
     <ClCompile Include="stdafx.cpp">

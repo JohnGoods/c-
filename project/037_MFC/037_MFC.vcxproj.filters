@@ -45,6 +45,9 @@
     <ClInclude Include="Dialog_ListBox.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Dialog_Slider.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="037_MFC.cpp">
@@ -66,6 +69,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Dialog_ListBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog_Slider.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
