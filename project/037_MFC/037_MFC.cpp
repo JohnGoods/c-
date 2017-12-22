@@ -70,9 +70,14 @@ BOOL CMy037_MFCApp::InitInstance()
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
-	CMy037_MFCDlg dlg;
+	//多个窗口
+	/*CDialog_ListBox dlg1;
+	dlg1.DoModal();*/
+
+	CMy037_MFCDlg dlg;	//这里可以设置其他启动窗口
 	m_pMainWnd = &dlg;
-	INT_PTR nResponse = dlg.DoModal();
+	INT_PTR nResponse = dlg.DoModal();	//必须完成才可以进行其他操作
+
 	if (nResponse == IDOK)
 	{
 		// TODO:  在此放置处理何时用
