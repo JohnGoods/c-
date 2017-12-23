@@ -5,6 +5,9 @@
 #include "037_MFC.h"
 #include "Cdialog_Main_Tab.h"
 #include "afxdialogex.h"
+#include "Dialog_ComboBox.h"
+#include "Dialog_ListBox.h"
+#include "Dialog_Slider.h"
 
 
 // Cdialog_Main_Tab 对话框
@@ -44,6 +47,25 @@ int Cdialog_Main_Tab::OnInitDialog()
 	ptab->InsertItem(3, L"333333");
 	ptab->InsertItem(4, L"444444");
 	ptab->InsertItem(8, L"aaaaaaaa");
+
+	//创建页面窗口
+	dlg_combobox.Create(IDD_DIALOG_COMBOBOX);
+	dlg_listbox.Create(IDD_DIALOG_LISTBOX);
+	dlg_slider.Create(IDD_DIALOG1);
+	//设页属窗口 父窗口
+	dlg_combobox.SetParent(ptab);
+	dlg_listbox.SetParent(ptab);
+	dlg_slider.SetParent(ptab);
+	//设置子窗口位置
+	RECT r1, r2, r3;
+	ptab->GetWindowRect(&r2);
+	ptab->GetItemRect(0, &r3);
+	r1.left = 5;
+	r1.top = r3.bottom + 5;
+	r1.right = r2.right - r2.left - 10;
+	r1.bottom = r2.bottom - r2.top - r1.top;
+	dlg_combobox.MoveWindow(&r1);
+	dlg_listbox.MoveWindow(&r1);
 	return 0;
 }
 
@@ -53,26 +75,34 @@ void Cdialog_Main_Tab::OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
 	// TODO: 在此添加控件通知处理程序代码
 	CTabCtrl *ptab = (CTabCtrl*)GetDlgItem(IDC_TAB1);
 	int cursel = ptab->GetCurSel();
-	switch (cursel)
-	{
-	case 0:
-		//显示属性窗口
-		TRACE("\n sel=%d", cursel);
-		break;
-	case 1:
-		TRACE("\n sel=%d", cursel);
-		break;
-	case 2:
-		TRACE("\n sel=%d", cursel);
-		break;
-	case 3:
-		TRACE("\n sel=%d", cursel);
-		break;
-	case 4:
-		TRACE("\n sel=%d", cursel);
-		break;
-	default:
-		break;
-	}
+	dlg_listbox.ShowWindow(cursel==0);
+	dlg_combobox.ShowWindow(cursel==1);
+	dlg_slider.ShowWindow(cursel==2);
+	//switch (cursel)
+	//{
+	//case 0:
+	//	//显示属性窗口
+	//	TRACE("\n sel=%d", cursel);
+	//	dlg_listbox.ShowWindow(SW_HIDE);
+	//	dlg_combobox.ShowWindow(SW_SHOW);
+	//	break;
+	//case 1:
+	//	TRACE("\n sel=%d", cursel);
+	//	dlg_combobox.ShowWindow(SW_HIDE);
+	//	dlg_listbox.ShowWindow(SW_SHOW);
+	//	break;
+	//case 2:
+	//	TRACE("\n sel=%d", cursel);
+	//	dlg_slider.ShowWindow(SW_SHOW);
+	//	break;
+	//case 3:
+	//	TRACE("\n sel=%d", cursel);
+	//	break;
+	//case 4:
+	//	TRACE("\n sel=%d", cursel);
+	//	break;
+	//default:
+	//	break;
+	//}
 	*pResult = 0;
 }

@@ -1,5 +1,9 @@
 #pragma once
-
+#include "NumEdit.h"	//基类
+#include "MY_Dialog.h"
+#include "Dialog_ComboBox.h"
+#include "Dialog_ListBox.h"
+#include "Dialog_Slider.h"
 
 // Cdialog_Main_Tab 对话框
 
@@ -12,7 +16,13 @@ public:
 	virtual ~Cdialog_Main_Tab();
 
 // 对话框数据
-	enum { IDD = IDD_DIALOG2 };
+	enum { IDD = IDD_DIALOG_TAB };
+	CNumEdit EDIT;
+	CString EDIT_CS;
+	CMY_Dialog dlg;
+	CDialog_ComboBox dlg_combobox;
+	CDialog_ListBox dlg_listbox;
+	CDialog_Slider dlg_slider;
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
