@@ -13,6 +13,7 @@ IMPLEMENT_DYNAMIC(CDialog_ListCtrl, CDialogEx)
 
 CDialog_ListCtrl::CDialog_ListCtrl(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CDialog_ListCtrl::IDD, pParent)
+	, FileDir(_T(""))
 {
 
 }
@@ -29,6 +30,7 @@ void CDialog_ListCtrl::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CDialog_ListCtrl, CDialogEx)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_LIST1, &CDialog_ListCtrl::OnLvnItemchangedList1)
+	ON_NOTIFY(NM_CLICK, IDC_LIST1, &CDialog_ListCtrl::OnNMClickList1)
 END_MESSAGE_MAP()
 
 
@@ -77,6 +79,29 @@ int CDialog_ListCtrl::OnInitDialog()
 		m_imagelist_s.Add(finfo.hIcon);//向ImageList里添加图标资源
 		plst_ctl->InsertItem(i++, findfile.GetFileName(), m_imagelist_b.Add(finfo.hIcon));
 	}
+	FileDir = findfile.GetRoot();//获取文件目录路径
 	findfile.Close();//释放资源
 	return 0;
+}
+
+
+void CDialog_ListCtrl::OnNMClickList1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMITEMACTIVATE pNMItemActivate = (LPNMITEMACTIVATE)(pNMHDR);
+	// TODO: 在此添加控件通知处理程序代码
+	//获取文件目录路径及文件
+	CListCtrl* plst_ctl = (CListCtrl*)GetDlgItem(IDC_LIST1);
+	//获取ListCtrl选中项的位置
+	POSITION pos = plst_ctl->GetFirstSelectedItemPosition();
+	if (pos)
+	{
+		int item_index = plst_ctl->GetNextSelectedItem(pos);
+		//获取选中图标的文件名
+		CString filename = plst_ctl->GetItemText(item_index, 0);
+		filename = FileDir + filename;
+		TRACE("%ws \n", filename);
+		ShellExecuteW(0, NULL, filename, NULL, NULL, SW_SHOWNORMAL);
+	}
+
+	*pResult = 0;
 }

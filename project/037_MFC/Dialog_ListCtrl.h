@@ -24,4 +24,7 @@ public:
 	int OnInitDialog();
 	CImageList m_imagelist_s;
 	CImageList m_imagelist_b;
+	afx_msg void OnNMClickList1(NMHDR *pNMHDR, LRESULT *pResult);
+	// //нд╪Ч
+	CString FileDir;
 };
