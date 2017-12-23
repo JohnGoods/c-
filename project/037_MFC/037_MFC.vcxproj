@@ -103,6 +103,7 @@
   <ItemGroup>
     <ClInclude Include="037_MFC.h" />
     <ClInclude Include="037_MFCDlg.h" />
+    <ClInclude Include="Cdialog_Main_Tab.h" />
     <ClInclude Include="Dialog_ComboBox.h" />
     <ClInclude Include="Dialog_ListBox.h" />
     <ClInclude Include="Dialog_Slider.h" />
@@ -115,6 +116,7 @@
   <ItemGroup>
     <ClCompile Include="037_MFC.cpp" />
     <ClCompile Include="037_MFCDlg.cpp" />
+    <ClCompile Include="Cdialog_Main_Tab.cpp" />
     <ClCompile Include="Dialog_ComboBox.cpp" />
     <ClCompile Include="Dialog_ListBox.cpp" />
     <ClCompile Include="Dialog_Slider.cpp" />
