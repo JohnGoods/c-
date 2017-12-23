@@ -47,17 +47,36 @@ int CDialog_ListCtrl::OnInitDialog()
 {
 	//添加项目
 	//添加项目
+	//添加项目
 	CListCtrl* plst_ctl = (CListCtrl*)GetDlgItem(IDC_LIST1);
 	//添加图标
 	m_imagelist_b.Create(32, 32, ILC_COLOR32 | ILC_MASK, 0, 0);
-	m_imagelist_b.Add(AfxGetApp()->LoadIcon(IDR_MAINFRAME));
+	m_imagelist_s.Create(16, 16, ILC_COLOR32 | ILC_MASK, 0, 0);
+	plst_ctl->SetImageList(&m_imagelist_b, LVSIL_NORMAL);//大图标
+	plst_ctl->SetImageList(&m_imagelist_s, LVSIL_SMALL);
 
-	plst_ctl->SetImageList(&m_imagelist_b, LVSIL_NORMAL);
-
-	plst_ctl->InsertItem(0, L"0000", 0);
-	plst_ctl->InsertItem(1, L"1111", 0);
-	plst_ctl->InsertItem(2, L"2222");
-	plst_ctl->InsertItem(3, L"aaaaa");
-	plst_ctl->SetItemText(3, 0, L"33333");
+	/*plst_ctl->InsertItem(0,L"0000",0);
+	plst_ctl->InsertItem(1,L"1111",0);
+	plst_ctl->InsertItem(2,L"2222");
+	plst_ctl->InsertItem(3,L"aaaaa");
+	plst_ctl->SetItemText(3,0,L"33333");*/
+	CFileFind findfile;
+	int nfound = findfile.FindFile(L"C:\\Windows\\//*.*");
+	int i = 0;
+	while (nfound)
+	{
+		nfound = findfile.FindNextFile();
+		if (findfile.IsDirectory())
+		{
+			continue;
+		}
+		SHFILEINFO finfo;
+		//获取文件信息，主要图标icon
+		SHGetFileInfo(findfile.GetFilePath(), 0, &finfo, sizeof(finfo), SHGFI_ICON);
+		//添加文件项目和图标
+		m_imagelist_s.Add(finfo.hIcon);//向ImageList里添加图标资源
+		plst_ctl->InsertItem(i++, findfile.GetFileName(), m_imagelist_b.Add(finfo.hIcon));
+	}
+	findfile.Close();//释放资源
 	return 0;
 }

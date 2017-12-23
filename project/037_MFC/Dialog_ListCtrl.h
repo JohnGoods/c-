@@ -22,5 +22,6 @@ protected:
 public:
 	afx_msg void OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult);
 	int OnInitDialog();
+	CImageList m_imagelist_s;
 	CImageList m_imagelist_b;
 };
