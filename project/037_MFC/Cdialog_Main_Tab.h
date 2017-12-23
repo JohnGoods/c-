@@ -4,6 +4,7 @@
 #include "Dialog_ComboBox.h"
 #include "Dialog_ListBox.h"
 #include "Dialog_Slider.h"
+#include "Dialog_ListCtrl.h"
 
 // Cdialog_Main_Tab 对话框
 
@@ -23,6 +24,7 @@ public:
 	CDialog_ComboBox dlg_combobox;
 	CDialog_ListBox dlg_listbox;
 	CDialog_Slider dlg_slider;
+	CDialog_ListCtrl dlg_list_ctrl;
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持

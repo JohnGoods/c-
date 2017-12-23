@@ -8,6 +8,7 @@
 #include "Dialog_ComboBox.h"
 #include "Dialog_ListBox.h"
 #include "Dialog_Slider.h"
+#include "Dialog_ListCtrl.h"
 
 
 // Cdialog_Main_Tab 对话框
@@ -42,20 +43,21 @@ int Cdialog_Main_Tab::OnInitDialog()
 {
 	//获取选项卡对象指针
 	CTabCtrl *ptab = (CTabCtrl*)GetDlgItem(IDC_TAB1);
-	ptab->InsertItem(1, L"111111");
-	ptab->InsertItem(2, L"222222");
-	ptab->InsertItem(3, L"333333");
-	ptab->InsertItem(4, L"444444");
-	ptab->InsertItem(8, L"aaaaaaaa");
-
+	ptab->InsertItem(1, L"组合框");
+	ptab->InsertItem(2, L"列表框");
+	ptab->InsertItem(3, L"滑块控件");
+	ptab->InsertItem(4, L"列表视图");
 	//创建页面窗口
 	dlg_combobox.Create(IDD_DIALOG_COMBOBOX);
 	dlg_listbox.Create(IDD_DIALOG_LISTBOX);
-	dlg_slider.Create(IDD_DIALOG1);
+	dlg_slider.Create(IDD_DIALOG_SLIDER);
+	dlg_list_ctrl.Create(IDD_DIALOG_LIST_CTRL);
 	//设页属窗口 父窗口
 	dlg_combobox.SetParent(ptab);
 	dlg_listbox.SetParent(ptab);
 	dlg_slider.SetParent(ptab);
+	dlg_list_ctrl.SetParent(ptab);
+
 	//设置子窗口位置
 	RECT r1, r2, r3;
 	ptab->GetWindowRect(&r2);
@@ -66,6 +68,8 @@ int Cdialog_Main_Tab::OnInitDialog()
 	r1.bottom = r2.bottom - r2.top - r1.top;
 	dlg_combobox.MoveWindow(&r1);
 	dlg_listbox.MoveWindow(&r1);
+	dlg_slider.MoveWindow(&r1);
+	dlg_list_ctrl.MoveWindow(&r1);
 	return 0;
 }
 
@@ -78,6 +82,7 @@ void Cdialog_Main_Tab::OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
 	dlg_listbox.ShowWindow(cursel==0);
 	dlg_combobox.ShowWindow(cursel==1);
 	dlg_slider.ShowWindow(cursel==2);
+	dlg_list_ctrl.ShowWindow(cursel == 3);
 	//switch (cursel)
 	//{
 	//case 0:

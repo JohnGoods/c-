@@ -13,7 +13,7 @@ public:
 	virtual ~CDialog_Slider();
 
 // 对话框数据
-	enum { IDD = IDD_DIALOG1 };
+	enum { IDD = IDD_DIALOG_SLIDER };
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
