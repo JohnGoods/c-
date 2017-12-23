@@ -46,12 +46,18 @@ void CDialog_ListCtrl::OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult)
 int CDialog_ListCtrl::OnInitDialog()
 {
 	//添加项目
+	//添加项目
 	CListCtrl* plst_ctl = (CListCtrl*)GetDlgItem(IDC_LIST1);
-	plst_ctl->InsertItem(0, L"0000");
-	plst_ctl->InsertItem(1, L"1111");
+	//添加图标
+	m_imagelist_b.Create(32, 32, ILC_COLOR32 | ILC_MASK, 0, 0);
+	m_imagelist_b.Add(AfxGetApp()->LoadIcon(IDR_MAINFRAME));
+
+	plst_ctl->SetImageList(&m_imagelist_b, LVSIL_NORMAL);
+
+	plst_ctl->InsertItem(0, L"0000", 0);
+	plst_ctl->InsertItem(1, L"1111", 0);
 	plst_ctl->InsertItem(2, L"2222");
 	plst_ctl->InsertItem(3, L"aaaaa");
 	plst_ctl->SetItemText(3, 0, L"33333");
-	return 0;
 	return 0;
 }
