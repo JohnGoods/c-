@@ -24,4 +24,15 @@ public:
 	CString m_sTime;
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	afx_msg void OnBnClickedButton3();
+	afx_msg void OnBnClickedButton4();
+	void CALLBACK EXPORT CDialog_Timer_::TimerProc2(
+		HWND hWnd,      // handle of CWnd that called SetTimer
+		UINT nMsg,      // WM_TIMER
+		UINT nIDEvent,   // timer identification
+		DWORD dwTime    // system time
+		);
+	
+	afx_msg void OnBnClickedButton5();
+	virtual BOOL OnInitDialog();
 };
