@@ -27,4 +27,6 @@ public:
 	afx_msg void OnNMClickList1(NMHDR *pNMHDR, LRESULT *pResult);
 	// //нд╪Ч
 	CString FileDir;
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnHotKey(UINT nHotKeyId, UINT nKey1, UINT nKey2);
 };

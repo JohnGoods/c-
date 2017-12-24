@@ -31,6 +31,8 @@ void CDialog_ListCtrl::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CDialog_ListCtrl, CDialogEx)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_LIST1, &CDialog_ListCtrl::OnLvnItemchangedList1)
 	ON_NOTIFY(NM_CLICK, IDC_LIST1, &CDialog_ListCtrl::OnNMClickList1)
+	ON_BN_CLICKED(IDC_BUTTON1, &CDialog_ListCtrl::OnBnClickedButton1)
+	ON_WM_HOTKEY()
 END_MESSAGE_MAP()
 
 
@@ -104,4 +106,30 @@ void CDialog_ListCtrl::OnNMClickList1(NMHDR *pNMHDR, LRESULT *pResult)
 	}
 
 	*pResult = 0;
+}
+
+
+void CDialog_ListCtrl::OnBnClickedButton1()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	//获取热键键值
+	CHotKeyCtrl *photk = (CHotKeyCtrl*)GetDlgItem(IDC_HOTKEY1);
+	WORD vkey, fsnoderfires;
+	photk->GetHotKey(vkey, fsnoderfires);
+	//注册热键
+	RegisterHotKey(m_hWnd, 111, fsnoderfires, vkey);
+}
+
+
+void CDialog_ListCtrl::OnHotKey(UINT nHotKeyId, UINT nKey1, UINT nKey2)
+{
+	// TODO:  在此添加消息处理程序代码和/或调用默认值
+	static bool flag = false;
+	if (nHotKeyId ==111){
+		//响应相关热键
+		//隐藏或者显示
+		GetParent()->ShowWindow(flag);
+		flag = !flag;
+	}
+	CDialogEx::OnHotKey(nHotKeyId, nKey1, nKey2);
 }
