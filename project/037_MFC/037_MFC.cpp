@@ -6,6 +6,7 @@
 #include "037_MFC.h"
 #include "037_MFCDlg.h"
 #include "Cdialog_Main_Tab.h"
+#include "Dialog_Picture.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -75,7 +76,8 @@ BOOL CMy037_MFCApp::InitInstance()
 	/*CDialog_ListBox dlg1;
 	dlg1.DoModal();*/
 
-	Cdialog_Main_Tab dlg;
+	//Cdialog_Main_Tab dlg;
+	CDialog_Picture dlg;
 
 	//CMy037_MFCDlg dlg;	//这里可以设置其他启动窗口
 	m_pMainWnd = &dlg;

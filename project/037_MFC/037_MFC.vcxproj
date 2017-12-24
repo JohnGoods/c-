@@ -107,6 +107,7 @@
     <ClInclude Include="Dialog_ComboBox.h" />
     <ClInclude Include="Dialog_ListBox.h" />
     <ClInclude Include="Dialog_ListCtrl.h" />
+    <ClInclude Include="Dialog_Picture.h" />
     <ClInclude Include="Dialog_Slider.h" />
     <ClInclude Include="MY_Dialog.h" />
     <ClInclude Include="NumEdit.h" />
@@ -121,6 +122,7 @@
     <ClCompile Include="Dialog_ComboBox.cpp" />
     <ClCompile Include="Dialog_ListBox.cpp" />
     <ClCompile Include="Dialog_ListCtrl.cpp" />
+    <ClCompile Include="Dialog_Picture.cpp" />
     <ClCompile Include="Dialog_Slider.cpp" />
     <ClCompile Include="MY_Dialog.cpp" />
     <ClCompile Include="NumEdit.cpp" />
@@ -137,6 +139,7 @@
     <None Include="res\My037_MFC.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="G:\Wg\郁金香VC++课程\001：郁金香2013网授_AVC++ 2008 详解 主讲(含C++，类，MFC，API等)（129集）\02郁金香2013网授VC++ 2008\080-CStatic类与Picture control控件\yjx2.bmp" />
     <Image Include="res\037_MFC.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
