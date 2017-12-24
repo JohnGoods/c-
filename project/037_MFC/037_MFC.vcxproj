@@ -109,6 +109,7 @@
     <ClInclude Include="Dialog_ListCtrl.h" />
     <ClInclude Include="Dialog_Picture.h" />
     <ClInclude Include="Dialog_Slider.h" />
+    <ClInclude Include="Dialog_TreeCtrl.h" />
     <ClInclude Include="MY_Dialog.h" />
     <ClInclude Include="NumEdit.h" />
     <ClInclude Include="Resource.h" />
@@ -124,6 +125,7 @@
     <ClCompile Include="Dialog_ListCtrl.cpp" />
     <ClCompile Include="Dialog_Picture.cpp" />
     <ClCompile Include="Dialog_Slider.cpp" />
+    <ClCompile Include="Dialog_TreeCtrl.cpp" />
     <ClCompile Include="MY_Dialog.cpp" />
     <ClCompile Include="NumEdit.cpp" />
     <ClCompile Include="stdafx.cpp">

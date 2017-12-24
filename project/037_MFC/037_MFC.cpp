@@ -7,6 +7,7 @@
 #include "037_MFCDlg.h"
 #include "Cdialog_Main_Tab.h"
 #include "Dialog_Picture.h"
+#include "Dialog_TreeCtrl.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -77,7 +78,8 @@ BOOL CMy037_MFCApp::InitInstance()
 	dlg1.DoModal();*/
 
 	//Cdialog_Main_Tab dlg;
-	CDialog_Picture dlg;
+	//CDialog_Picture dlg;
+	CDialog_TreeCtrl dlg;
 
 	//CMy037_MFCDlg dlg;	//这里可以设置其他启动窗口
 	m_pMainWnd = &dlg;
