@@ -60,6 +60,9 @@
     <ClInclude Include="Dialog_TreeCtrl.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Dialog_Timer_.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="037_MFC.cpp">
@@ -96,6 +99,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Dialog_TreeCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog_Timer_.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
