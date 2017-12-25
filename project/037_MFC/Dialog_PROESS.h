@@ -32,4 +32,12 @@ public:
 	afx_msg void OnBnClickedRadio4();
 	afx_msg void OnBnClickedRadio5();
 	afx_msg void OnBnClickedRadio6();
+	afx_msg void OnBnClickedRadio7();
+	int m_radio_thread_selNum;
+	afx_msg void OnBnClickedRadio8();
+	afx_msg void OnBnClickedRadio9();
+	afx_msg void OnBnClickedRadio10();
+	afx_msg void OnBnClickedRadio11();
+	afx_msg void OnBnClickedRadio12();
+	afx_msg void OnBnClickedRadio13();
 };
