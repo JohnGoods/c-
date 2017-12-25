@@ -35,6 +35,12 @@ BEGIN_MESSAGE_MAP(CDialog_PROESS, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON5, &CDialog_PROESS::OnBnClickedButton5)
 	ON_BN_CLICKED(IDC_BUTTON6, &CDialog_PROESS::OnBnClickedButton6)
 	ON_BN_CLICKED(IDC_BUTTON7, &CDialog_PROESS::OnBnClickedButton7)
+	ON_BN_CLICKED(IDC_RADIO1, &CDialog_PROESS::OnBnClickedRadio1)
+	ON_BN_CLICKED(IDC_RADIO2, &CDialog_PROESS::OnBnClickedRadio2)
+	ON_BN_CLICKED(IDC_RADIO3, &CDialog_PROESS::OnBnClickedRadio3)
+	ON_BN_CLICKED(IDC_RADIO4, &CDialog_PROESS::OnBnClickedRadio4)
+	ON_BN_CLICKED(IDC_RADIO5, &CDialog_PROESS::OnBnClickedRadio5)
+	ON_BN_CLICKED(IDC_RADIO6, &CDialog_PROESS::OnBnClickedRadio6)
 END_MESSAGE_MAP()
 
 
@@ -112,4 +118,46 @@ void CDialog_PROESS::OnBnClickedButton7()
 {
 	// TODO:  在此添加控件通知处理程序代码
 	TerminateThread(th, 11);
+}
+
+
+void CDialog_PROESS::OnBnClickedRadio1()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SetPriorityClass(GetCurrentProcess(), IDLE_PRIORITY_CLASS);
+}
+
+
+void CDialog_PROESS::OnBnClickedRadio2()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SetPriorityClass(GetCurrentProcess(), BELOW_NORMAL_PRIORITY_CLASS);
+}
+
+
+void CDialog_PROESS::OnBnClickedRadio3()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SetPriorityClass(GetCurrentProcess(), NORMAL_PRIORITY_CLASS);
+}
+
+
+void CDialog_PROESS::OnBnClickedRadio4()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SetPriorityClass(GetCurrentProcess(), ABOVE_NORMAL_PRIORITY_CLASS);
+}
+
+
+void CDialog_PROESS::OnBnClickedRadio5()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SetPriorityClass(GetCurrentProcess(), HIGH_PRIORITY_CLASS);
+}
+
+
+void CDialog_PROESS::OnBnClickedRadio6()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
 }
