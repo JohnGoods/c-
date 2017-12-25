@@ -108,6 +108,7 @@
     <ClInclude Include="Dialog_ListBox.h" />
     <ClInclude Include="Dialog_ListCtrl.h" />
     <ClInclude Include="Dialog_Picture.h" />
+    <ClInclude Include="Dialog_PROESS.h" />
     <ClInclude Include="Dialog_Slider.h" />
     <ClInclude Include="Dialog_Timer_.h" />
     <ClInclude Include="Dialog_TreeCtrl.h" />
@@ -125,6 +126,7 @@
     <ClCompile Include="Dialog_ListBox.cpp" />
     <ClCompile Include="Dialog_ListCtrl.cpp" />
     <ClCompile Include="Dialog_Picture.cpp" />
+    <ClCompile Include="Dialog_PROESS.cpp" />
     <ClCompile Include="Dialog_Slider.cpp" />
     <ClCompile Include="Dialog_Timer_.cpp" />
     <ClCompile Include="Dialog_TreeCtrl.cpp" />
