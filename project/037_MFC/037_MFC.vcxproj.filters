@@ -66,6 +66,9 @@
     <ClInclude Include="Dialog_PROESS.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Dialog_Thread_Priority.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="037_MFC.cpp">
@@ -108,6 +111,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Dialog_PROESS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog_Thread_Priority.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

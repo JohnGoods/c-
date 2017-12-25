@@ -110,6 +110,7 @@
     <ClInclude Include="Dialog_Picture.h" />
     <ClInclude Include="Dialog_PROESS.h" />
     <ClInclude Include="Dialog_Slider.h" />
+    <ClInclude Include="Dialog_Thread_Priority.h" />
     <ClInclude Include="Dialog_Timer_.h" />
     <ClInclude Include="Dialog_TreeCtrl.h" />
     <ClInclude Include="MY_Dialog.h" />
@@ -128,6 +129,7 @@
     <ClCompile Include="Dialog_Picture.cpp" />
     <ClCompile Include="Dialog_PROESS.cpp" />
     <ClCompile Include="Dialog_Slider.cpp" />
+    <ClCompile Include="Dialog_Thread_Priority.cpp" />
     <ClCompile Include="Dialog_Timer_.cpp" />
     <ClCompile Include="Dialog_TreeCtrl.cpp" />
     <ClCompile Include="MY_Dialog.cpp" />

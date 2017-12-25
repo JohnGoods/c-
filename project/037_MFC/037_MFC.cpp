@@ -10,6 +10,7 @@
 #include "Dialog_TreeCtrl.h"
 #include "Dialog_Timer_.h"
 #include "Dialog_PROESS.h"
+#include "Dialog_Thread_Priority.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -83,7 +84,8 @@ BOOL CMy037_MFCApp::InitInstance()
 	//CDialog_Picture dlg;
 	//CDialog_TreeCtrl dlg;
 	//CDialog_Timer_ dlg;
-	CDialog_PROESS dlg;
+	//CDialog_PROESS dlg;
+	CDialog_Thread_Priority dlg;
 
 	//CMy037_MFCDlg dlg;	//这里可以设置其他启动窗口
 	m_pMainWnd = &dlg;
