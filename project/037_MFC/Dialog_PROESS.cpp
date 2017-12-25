@@ -31,6 +31,10 @@ BEGIN_MESSAGE_MAP(CDialog_PROESS, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CDialog_PROESS::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &CDialog_PROESS::OnBnClickedButton2)
 	ON_BN_CLICKED(IDC_BUTTON3, &CDialog_PROESS::OnBnClickedButton3)
+	ON_BN_CLICKED(IDC_BUTTON4, &CDialog_PROESS::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON5, &CDialog_PROESS::OnBnClickedButton5)
+	ON_BN_CLICKED(IDC_BUTTON6, &CDialog_PROESS::OnBnClickedButton6)
+	ON_BN_CLICKED(IDC_BUTTON7, &CDialog_PROESS::OnBnClickedButton7)
 END_MESSAGE_MAP()
 
 
@@ -64,4 +68,48 @@ void CDialog_PROESS::OnBnClickedButton3()
 	// TODO: 在此添加控件通知处理程序代码
 	//强制退出 清理的工作还没完成
 	ExitProcess(1222);
+}
+
+DWORD WINAPI ThreadProc1(
+	LPVOID lpParameter   // thread data
+	)
+{
+	static int i = 0;
+	while (1)
+	{
+		Sleep(1000);
+		TRACE("thread  i=%d    \n", i++);
+	}
+
+	return 1;
+}
+
+HANDLE th;
+void CDialog_PROESS::OnBnClickedButton4()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	DWORD tid;
+	//创建新线程
+	th = CreateThread(NULL, 0, ThreadProc1, 0, CREATE_SUSPENDED, &tid);
+}
+
+
+void CDialog_PROESS::OnBnClickedButton5()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	ResumeThread(th); //恢复线程
+}
+
+
+void CDialog_PROESS::OnBnClickedButton6()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	SuspendThread(th);//挂起线程
+}
+
+
+void CDialog_PROESS::OnBnClickedButton7()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	TerminateThread(th, 11);
 }
