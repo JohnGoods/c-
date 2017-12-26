@@ -22,28 +22,35 @@ int _tmain(int argc, _TCHAR* argv[])
 		printf("加载套接字库出错 \n");
 	}
 	//2创建一个套接字 供使用
-	SOCKET ServerSocket = socket(AF_INET, SOCK_STREAM, 0);
+	SOCKET ServerSocket;
 	//3、向服务器发出连接请求（connect）。
 	SOCKADDR_IN socksin;
 	socksin.sin_family = AF_INET;
 	socksin.sin_port = htons(6688);
 	socksin.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");//设置绑定的IP地址 192.168.1.111
 	//printf("%04X \n",htonl(0x668899AA));
-	int rf = connect(ServerSocket, (SOCKADDR*)&socksin, sizeof(socksin));
-	if (rf == SOCKET_ERROR)
+	while (1)
 	{
-		printf("未成功连接到服务器\n");
+		ServerSocket = socket(AF_INET, SOCK_STREAM, 0);
+		int rf = connect(ServerSocket, (SOCKADDR*)&socksin, sizeof(socksin));
+		if (rf == SOCKET_ERROR)
+		{
+			printf("未成功连接到服务器\n");
+		}
+		else
+		{
+			printf("成功连接到服务器\n");
+			char *ps = "客户端数据来了 yjxsoft.com\n";
+			char s[256];
+			gets(s);
+			ps = s;
+			send(ServerSocket, ps, strlen(ps), 0);
+			//接收数据
+			recv(ServerSocket, ps, 256, 0);
+			printf("%s \n", ps);
+		}
+		closesocket(ServerSocket);
 	}
-	{
-		printf("成功连接到服务器\n");
-		char *ps = "客户端数据来了 yjxsoft.com\n";
-		char s[256];
-		gets(s);
-		ps = s;
-		send(ServerSocket, ps, strlen(ps), 0);
-	}
-	getchar();
-	getchar();
 	closesocket(ServerSocket);
 	WSACleanup();
 	return 0;
