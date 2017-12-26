@@ -87,6 +87,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "041_Socket_Client", "041_So
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "042_MFC_Socket_Server", "042_MFC_Socket_Server\042_MFC_Socket_Server.vcxproj", "{250DF0DD-A38B-4C11-975E-F5A06EF90720}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "043_静态链接库", "043_静态链接库\043_静态链接库.vcxproj", "{1765F9BC-5A95-462B-B589-378CB6F2B3D0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "043_2_静态链接库使用", "043_2_静态链接库使用\043_2_静态链接库使用.vcxproj", "{4E406C01-136F-407F-86A8-E0911109B59D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -261,6 +265,14 @@ Global
 		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Debug|Win32.Build.0 = Debug|Win32
 		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Release|Win32.ActiveCfg = Release|Win32
 		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Release|Win32.Build.0 = Release|Win32
+		{1765F9BC-5A95-462B-B589-378CB6F2B3D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1765F9BC-5A95-462B-B589-378CB6F2B3D0}.Debug|Win32.Build.0 = Debug|Win32
+		{1765F9BC-5A95-462B-B589-378CB6F2B3D0}.Release|Win32.ActiveCfg = Release|Win32
+		{1765F9BC-5A95-462B-B589-378CB6F2B3D0}.Release|Win32.Build.0 = Release|Win32
+		{4E406C01-136F-407F-86A8-E0911109B59D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E406C01-136F-407F-86A8-E0911109B59D}.Debug|Win32.Build.0 = Debug|Win32
+		{4E406C01-136F-407F-86A8-E0911109B59D}.Release|Win32.ActiveCfg = Release|Win32
+		{4E406C01-136F-407F-86A8-E0911109B59D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
