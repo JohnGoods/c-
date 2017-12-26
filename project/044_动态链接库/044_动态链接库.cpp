@@ -21,7 +21,7 @@ CMy044_动态链接库::CMy044_动态链接库()
 	return;
 }
 
-MY044__API int aaa = 888;
-__declspec(dllexport) int add(int a, int b){
+extern "C" MY044__API int aaa = 888;
+extern "C" __declspec(dllexport) int add(int a, int b){
 	return a + b;
 }

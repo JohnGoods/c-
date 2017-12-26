@@ -21,8 +21,8 @@ extern MY044__API int nMy044_动态链接库;
 
 MY044__API int fnMy044_动态链接库(void);
 
-extern MY044__API int ndllwin32;
-extern MY044__API int aaa;
+extern "C" MY044__API int ndllwin32;
+extern "C" MY044__API int aaa;
 MY044__API int fndllwin32(void);
-__declspec(dllexport) int add(int a, int b);
+extern "C" __declspec(dllexport) int add(int a, int b);
 
