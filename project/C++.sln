@@ -85,6 +85,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "040_Socket_Server", "040_So
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "041_Socket_Client", "041_Socket_Client\041_Socket_Client.vcxproj", "{0DC73D02-B58A-4761-9C4B-73871E9D3282}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "042_MFC_Socket_Server", "042_MFC_Socket_Server\042_MFC_Socket_Server.vcxproj", "{250DF0DD-A38B-4C11-975E-F5A06EF90720}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -255,6 +257,10 @@ Global
 		{0DC73D02-B58A-4761-9C4B-73871E9D3282}.Debug|Win32.Build.0 = Debug|Win32
 		{0DC73D02-B58A-4761-9C4B-73871E9D3282}.Release|Win32.ActiveCfg = Release|Win32
 		{0DC73D02-B58A-4761-9C4B-73871E9D3282}.Release|Win32.Build.0 = Release|Win32
+		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Debug|Win32.ActiveCfg = Debug|Win32
+		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Debug|Win32.Build.0 = Debug|Win32
+		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Release|Win32.ActiveCfg = Release|Win32
+		{250DF0DD-A38B-4C11-975E-F5A06EF90720}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
