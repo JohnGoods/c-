@@ -95,6 +95,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "044_动态链接库", "044_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "044_2_动态链接库", "044_2_动态链接库\044_2_动态链接库.vcxproj", "{F038956F-3EBB-4C88-9587-A9DF43BABC5F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "045_MFC动态链接库", "045_MFC动态链接库\045_MFC动态链接库.vcxproj", "{8A2232D4-948F-475C-A5F8-42D44538E665}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -285,6 +287,10 @@ Global
 		{F038956F-3EBB-4C88-9587-A9DF43BABC5F}.Debug|Win32.Build.0 = Debug|Win32
 		{F038956F-3EBB-4C88-9587-A9DF43BABC5F}.Release|Win32.ActiveCfg = Release|Win32
 		{F038956F-3EBB-4C88-9587-A9DF43BABC5F}.Release|Win32.Build.0 = Release|Win32
+		{8A2232D4-948F-475C-A5F8-42D44538E665}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8A2232D4-948F-475C-A5F8-42D44538E665}.Debug|Win32.Build.0 = Debug|Win32
+		{8A2232D4-948F-475C-A5F8-42D44538E665}.Release|Win32.ActiveCfg = Release|Win32
+		{8A2232D4-948F-475C-A5F8-42D44538E665}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
