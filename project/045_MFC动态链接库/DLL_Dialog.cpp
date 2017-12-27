@@ -45,6 +45,7 @@ void showdlg2(void){
 }
 
 void showdlg3(void){
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
 	CDLL_Dialog *pdlg = new CDLL_Dialog;
 	pdlg->Create(IDD_DIALOG1);
 	pdlg->ShowWindow(SW_SHOW);
@@ -52,6 +53,7 @@ void showdlg3(void){
 }
 
 void showdlg4(void){
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
 	if (g_dlg.m_hWnd == 0){
 		g_dlg.Create(IDD_DIALOG1);
 	}
@@ -59,6 +61,7 @@ void showdlg4(void){
 }
 
 void showdlg5(void){
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
 	CDLL_Dialog dlg;
 	dlg.Create(IDD_DIALOG1);
 	dlg.ShowWindow(SW_SHOW);
